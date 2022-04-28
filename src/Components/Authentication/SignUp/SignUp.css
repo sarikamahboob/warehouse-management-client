@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+.form-container{
+    width: 450px;
+    margin: 60px auto;
+    height: 100%;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.form-title{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 40px;
+    color: #041562;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form input, .form button, .social-login button{
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form input::placeholder {
+    color: #041562;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form input {
+    background: #ecf0f3be;
+    margin-top: 18px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.form input:hover{
+    border: 1px solid #041562;
+}
+
+.form  button ,
+.social-login button{
+    width: 50%;
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 8px;
+    background: #041562;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.form  button:hover, .social-login button:hover{
+    color: #041562;
+    background: white;
+    box-shadow: none;
+    font-weight: 700;
+}
+
+.toggle-link{
+    text-align: center;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.toggle-link span{
+    font-family: 'Roboto', sans-serif;
+   cursor: pointer;
+}
+
+.or{
+    display: flex;
+    align-items: center;
+}
+
+.line{
+    background-color: #041562;
+    height: 1px;
+    width:50%;
+}
+
+.or span{
+    margin: 0px 7px 0px 7px;
+    font-family: 'Roboto', sans-serif;
+    color: #e85b40;
+}
+
+.social-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-login button{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-login span{
+    margin-right: 7px;
+}
+
+.error-message{
+    font-size: 16px;
+    color: red;
+    margin:10px;
+    
+}
