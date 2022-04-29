@@ -1,3 +1,23 @@
 .banner{
-    background-color: brown;
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel-caption{
+   
+}
+
+.banner-button{
+    background-color: transparent;
+    color: white;
+    border: 2px solid #e85b40;
+    border-radius: 5px;
+    padding: 8px 15px;
+    transition: 0.4s;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.banner-button:hover{
+    background-color: #e85b40;
+    color: #041562;
 }
