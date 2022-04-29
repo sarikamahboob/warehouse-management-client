@@ -1,0 +1,11 @@
+.product-card{
+    border: 1px solid lightgray;
+}
+
+.product-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid lightgray;
+}

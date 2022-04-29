@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Edifier R1280DBs Bluetooth Bookshelf Speaker",
+      "price": "500",
+      "description": "The Edifier R1280DBs Bluetooth Speaker features a Bluetooth connection. It has a Φ13mm tweeter unit + 4-inch mid-woofer and the total power output is R/L: 21W+21W RMS.  It features a 51Hz-20KHz frequency response range. It supports multiple connections. Optical, Coaxial, Bluetooth, Dual RCA, Subwoofer output. It has a Removable Grill that protects your speaker drivers, easy to remove for cleaning.",
+      "image": "https://i.ibb.co/18bTsvt/p1.jpg",
+      "quantity": "20",
+      "supplier-name": "John Smith"
+    },
+    {
+        "name": "X-mini INFINITI Bluetooth Speaker",
+        "price": "300",
+        "description": "Unlike conventional directional audio systems, the X-mini INFINITI can fill the entire room with breathtaking and immersive Omni-directional sound without losing audio detail and depth. Housing four drivers, one dedicated subwoofer with built-in DSP and DPAC audio technologies, get ready to enjoy the ultimate music experience with the X-mini INFINITI.",
+        "image": "https://i.ibb.co/GsWd51T/p2.jpg",
+        "quantity": "10",
+        "supplier-name": "Steve John"
+    },
+    {
+        "name": "Xiaomi IMILAB KW66 Smart Watch",
+        "price": "450",
+        "description": "The Xiaomi iMi KW66 Multifunctional Watch is a gadget that will help in everyday life. Modern design with zinc alloy and IML coated case back give it a stylish look. You can easily change the dials to suit your mood and style. Xiaomi iMi KW66 has a built-in 340 mAh battery, which means that you can use it for a long time without recharging.",
+        "image": "https://i.ibb.co/jgC7Tdn/p3.jpg",
+        "quantity": "12",
+        "supplier-name": "John Snow"
+    },
+    {
+        "name": "Apple Watch Series 7 45mm Sports Band",
+        "price": "500",
+        "description": "The Apple Watch Series 7 45mm Sports Band features the largest, most advanced display yet. It comes with an always-On Retina LTPO OLED display, 1,000 nits brightness. The display is Crack Resistant, Dust Resistant (IP6X), and Swimproof with WR50 water resistance. Series 7 puts more health insights in sight.",
+        "image": "https://i.ibb.co/QNK2Vt9/p4.jpg",
+        "quantity": "25",
+        "supplier-name": "Michael Green"
+    },
+    {
+        "name": "Apple MacBook Air 13.3-Inch",
+        "price": "800",
+        "description": "Apple's thinnest, lightest notebook, completely transformed by the Apple M1 chip. CPU speeds up to 3.5x faster. GPU speeds up to 5x faster. Our most advanced Neural Engine for up to 9x faster machine learning.The longest battery life ever in a MacBook Air. And a silent, fanless design.",
+        "image": "https://i.ibb.co/89dqFTg/p5.jpg",
+        "quantity": "26",
+        "supplier-name": "White Walker"
+    },
+    {
+        "name": "Walton Walpad 10P Tablet",
+        "price": "300",
+        "description": "Walton Walpad 10P Tablet comes with Helio P60 Octa-Core Processor, 6GB LPDDR4 RAM, 128GB Storage. The WALPAD 10P is designed to be portable and durable with its 510g lightweight. It designed with slim, sleek and pure body design. This TAB is featured with 10.5-inch display, full-viewing angle and minimized bezel for maximizing your viewing-ability.",
+        "image": "https://i.ibb.co/F79B4JN/p6.jpg",
+        "quantity": "23",
+        "supplier-name": "Pink Ferrade"
+    }
+  ]

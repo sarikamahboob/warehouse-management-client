@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import banner1 from "../../../Images/banner1.png";
 import banner2 from "../../../Images/banner2.png";
 import banner3 from "../../../Images/banner3.png";
 import banner4 from "../../../Images/banner4.png";
 import banner5 from "../../../Images/banner5.png";
+import Header from "../Header/Header";
 import "./Banner.css";
 
 const Banner = () => {

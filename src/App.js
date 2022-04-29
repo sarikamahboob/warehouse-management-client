@@ -15,20 +15,42 @@ import UpdateProduct from "./Components/ProductManagement/UpdateProduct/UpdatePr
 import SignIn from "./Components/Authentication/SignIn/SignIn";
 import SignUp from "./Components/Authentication/SignUp/SignUp";
 import NotFound from "./Components/NotFound/NotFound";
+import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/inventory" element={<Inventory />} />
-        <Route path="/inventory/:id" element={<UpdateProduct />} />
+        <Route
+          path="/inventory/:id"
+          element={
+            <RequireAuth>
+              <UpdateProduct />
+            </RequireAuth>
+          }
+        />
         <Route path="/manageInventory" element={<ManageInventory />} />
-        <Route path="/addProduct" element={<AddProduct />} />
-        <Route path="/orders" element={<Orders />} />
+        <Route
+          path="/addProduct"
+          element={
+            <RequireAuth>
+              <AddProduct />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <RequireAuth>
+              <Orders />
+            </RequireAuth>
+          }
+        />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
