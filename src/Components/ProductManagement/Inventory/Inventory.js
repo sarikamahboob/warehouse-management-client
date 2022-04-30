@@ -18,26 +18,19 @@ const Inventory = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  const handleOrder = (product) => {
-    const { _id, image, name, price } = product;
-    fetch("http://localhost:5000/orders", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        _id,
-        image,
-        name,
-        price,
-        email: user.email,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        toast("Order Added Successfully !!!");
-        console.log(data);
-      });
+  const handleDeleteProduct = (id) => {
+    const proceed = window.confirm("Are you sure to delete the product?");
+    if (proceed) {
+      fetch(`http://localhost:5000/inventory/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          const remaining = products.filter((order) => order._id !== id);
+          setProducts(remaining);
+        });
+    }
   };
 
   return (
@@ -46,8 +39,10 @@ const Inventory = () => {
         {products.map((product) => (
           <div>
             <Product key={product._id} product={product}></Product>
-            <button onClick={() => handleOrder(product)}>Order Now </button>
             <ToastContainer />
+            <button onClick={() => handleDeleteProduct(product._id)}>
+              Delete
+            </button>
           </div>
         ))}
       </div>

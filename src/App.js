@@ -8,7 +8,6 @@ import Blogs from "./Components/Blogs/Blogs";
 import Header from "./Components/Home/Header/Header";
 import Footer from "./Components/Home/Footer/Footer";
 import AddProduct from "./Components/ProductManagement/AddProduct/AddProduct";
-import Orders from "./Components/ProductManagement/Orders/Orders";
 import ManageInventory from "./Components/ProductManagement/ManageInventory/ManageInventory";
 import Inventory from "./Components/ProductManagement/Inventory/Inventory";
 import UpdateProduct from "./Components/ProductManagement/UpdateProduct/UpdateProduct";
@@ -16,6 +15,7 @@ import SignIn from "./Components/Authentication/SignIn/SignIn";
 import SignUp from "./Components/Authentication/SignUp/SignUp";
 import NotFound from "./Components/NotFound/NotFound";
 import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
+import UserProducts from "./Components/ProductManagement/UserProducts/UserProducts";
 
 function App() {
   return (
@@ -44,10 +44,10 @@ function App() {
           }
         />
         <Route
-          path="/orders"
+          path="/userproducts"
           element={
             <RequireAuth>
-              <Orders />
+              <UserProducts />
             </RequireAuth>
           }
         />

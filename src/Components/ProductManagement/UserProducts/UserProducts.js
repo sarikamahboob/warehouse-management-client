@@ -1,30 +1,35 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
-import "./Orders.css";
+import "./UserProducts.css";
 
-const Orders = () => {
+const UserProducts = () => {
   const [user] = useAuthState(auth);
-  const [orderList, setOrderList] = useState([]);
+  const [userProducts, setUserProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orderList")
+    const email = user.email;
+    console.log(user.email);
+    fetch(`http://localhost:5000/addProduct?email=${email}`)
       .then((res) => res.json())
-      .then((data) => setOrderList(data));
-  }, [user.email]);
+      .then((data) => {
+        setUserProducts(data);
+      });
+  }, [user]);
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete the item?");
     if (proceed) {
-      fetch(`http://localhost:5000/orderList/${id}`, {
+      fetch(`http://localhost:5000/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          const remaining = orderList.filter((order) => order._id !== id);
-          setOrderList(remaining);
+          const remaining = userProducts.filter(
+            (product) => product._id !== id
+          );
+          setUserProducts(remaining);
         });
     }
   };
@@ -33,7 +38,7 @@ const Orders = () => {
     <div>
       <h1>Orders</h1>
       <div className="order-container">
-        {orderList.map((order) => (
+        {userProducts.map((order) => (
           <div className="order">
             <li>
               <span>
@@ -52,4 +57,4 @@ const Orders = () => {
   );
 };
 
-export default Orders;
+export default UserProducts;

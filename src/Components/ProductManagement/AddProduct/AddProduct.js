@@ -1,26 +1,33 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import auth from "../../../firebase.init";
 
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
+  const [user] = useAuthState(auth);
 
-  const onSubmit = (result) => {
-    fetch("http://localhost:5000/inventory", {
+  const onSubmit = (data, event) => {
+    console.log(data);
+    fetch("http://localhost:5000/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(result),
+      body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((result) => {
+        console.log(result);
+        event.target.reset();
+      });
   };
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           placeholder="Product Name"
-          {...register("name", { required: true, maxLength: 30 })}
+          {...register("name", { required: true })}
         />
         <input
           placeholder="Product Image"
@@ -41,6 +48,12 @@ const AddProduct = () => {
         <input
           placeholder="Product Quantity"
           {...register("quantity", { required: true })}
+        />
+        <input
+          placeholder="User Email"
+          value={user.email}
+          {...register("email", { value: user.email, required: true })}
+          disabled
         />
 
         <input type="submit" value="Add Product" />

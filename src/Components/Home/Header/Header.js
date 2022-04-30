@@ -49,24 +49,29 @@ const Header = () => {
                 >
                   Inventory
                 </Nav.Link>
-                <Nav.Link
-                  as={NavLink}
-                  to="/addProduct"
-                  className={({ isActive }) =>
-                    isActive ? "active" : "nav-link"
-                  }
-                >
-                  Add Product
-                </Nav.Link>
-                <Nav.Link
-                  as={NavLink}
-                  to="/orders"
-                  className={({ isActive }) =>
-                    isActive ? "active" : "nav-link"
-                  }
-                >
-                  Orders
-                </Nav.Link>
+
+                {user && (
+                  <>
+                    <Nav.Link
+                      as={NavLink}
+                      to="/addProduct"
+                      className={({ isActive }) =>
+                        isActive ? "active" : "nav-link"
+                      }
+                    >
+                      Add Product
+                    </Nav.Link>
+                    <Nav.Link
+                      as={NavLink}
+                      to="/userproducts"
+                      className={({ isActive }) =>
+                        isActive ? "active" : "nav-link"
+                      }
+                    >
+                      My Products
+                    </Nav.Link>
+                  </>
+                )}
                 {user ? (
                   <Nav.Link onClick={handleSignOut}>Sing Out</Nav.Link>
                 ) : (
