@@ -1,5 +1,22 @@
 .product-card{
-    border: 1px solid lightgray;
+    border: 2px solid lightgray;
+    padding: 20px;
+    height: 100%;
+    transition: 0.4s linear;
+}
+
+.product-card:hover{
+    border: 2px solid #e85b40;
+    
+}
+
+.product-card:hover .product-image{
+    border-bottom: 2px solid #e85b40;
+    transform: scaleX(0.8);
+}
+
+.product-card:hover .product-name{
+    color: #e85b40;
 }
 
 .product-image{
@@ -7,5 +24,59 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    border: 1px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    transition: 0.4s;
+}
+
+.product-name{
+    color: #000957;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 0.4s ;
+}
+
+
+.product-description{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+.product-description span{
+    color:#e85b40;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.product-description span:hover{
+    color: #000957;
+}
+
+.product-price, .product-supplier, .product-quantity{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-price > span, .product-supplier > span, .product-quantity > span{
+    color: #000957;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.stock-update-button{
+    background-color: transparent;
+    color: #000957;
+    font-family: 'Saira Condensed', sans-serif;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid #e85b40;
+    transition: 0.4s;
+}
+
+.stock-update-button:hover{
+    color: white;
+    background-color: #e85b40;
 }

@@ -46,7 +46,14 @@ const Inventory = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => navigate(`/addProduct`)}>Add New Product</button>
+      <div className="inventory-button">
+        <button
+          className="manage-inventory-button"
+          onClick={() => navigate(`/addProduct`)}
+        >
+          Add New Product
+        </button>
+      </div>
     </div>
   );
 };

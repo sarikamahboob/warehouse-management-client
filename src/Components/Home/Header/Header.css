@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&display=swap');
 .navbar{
-    background-color: #041562;
+    background-color: #000957;
     color: white;
 }
 
@@ -8,6 +9,7 @@
     color: white !important;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .navbar-brand 
@@ -18,9 +20,9 @@
 
 .navbar-nav .nav-link{
     color: white !important;
-    font-weight: 400;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    font-family: 'Saira Condensed', sans-serif;
 }
 
 .navbar-nav .nav-link.active{

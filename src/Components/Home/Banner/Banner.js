@@ -26,7 +26,11 @@ const Banner = () => {
       >
         <Carousel.Item>
           <img className="d-block w-100" src={banner1} alt="Second slide" />
-          <Carousel.Caption>
+          <Carousel.Caption
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <small>Smart Watch</small>
             <h3>Xiaomi Imtlab KW66 Smart Watch</h3>
             <p>
@@ -45,7 +49,11 @@ const Banner = () => {
 
         <Carousel.Item>
           <img className="d-block w-100" src={banner2} alt="Second slide" />
-          <Carousel.Caption>
+          <Carousel.Caption
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <small>Laptop</small>
             <h3>Apple MacBook Air 13.3-Inch</h3>
             <p>
@@ -64,7 +72,11 @@ const Banner = () => {
 
         <Carousel.Item>
           <img className="d-block w-100" src={banner3} alt="Third slide" />
-          <Carousel.Caption>
+          <Carousel.Caption
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <small>Headphone</small>
             <h3>Edifier H840</h3>
             <p>
@@ -84,7 +96,11 @@ const Banner = () => {
 
         <Carousel.Item>
           <img className="d-block w-100" src={banner4} alt="First slide" />
-          <Carousel.Caption>
+          <Carousel.Caption
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <small>Smart Watch</small>
             <h3>Apple Watch Series 7</h3>
             <p>
@@ -103,7 +119,11 @@ const Banner = () => {
 
         <Carousel.Item>
           <img className="d-block w-100" src={banner5} alt="First slide" />
-          <Carousel.Caption>
+          <Carousel.Caption
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <small>Bluetooth Speaker</small>
             <h3>X-mini INFINITI </h3>
             <p>

@@ -16,8 +16,14 @@ import SignUp from "./Components/Authentication/SignUp/SignUp";
 import NotFound from "./Components/NotFound/NotFound";
 import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
 import UserProducts from "./Components/ProductManagement/UserProducts/UserProducts";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div>
       <Header />

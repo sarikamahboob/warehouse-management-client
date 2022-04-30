@@ -3,10 +3,6 @@
     top:0;
 }
 
-.carousel-caption{
-   
-}
-
 .banner-button{
     background-color: transparent;
     color: white;
@@ -20,5 +16,27 @@
 
 .banner-button:hover{
     background-color: #e85b40;
-    color: #041562;
+    color: white;
+}
+
+@media only screen and (max-width: 576px) {
+    .carousel-caption > p {
+        display: none;
+    }
+    .banner-button{
+        background-color: transparent;
+        color: white;
+        border: 2px solid #e85b40;
+        border-radius: 5px;
+        padding: 5px 10px;
+        transition: 0.4s;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .carousel-caption > p {
+        display: none;
+    }
 }

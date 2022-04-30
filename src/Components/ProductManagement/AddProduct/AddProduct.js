@@ -23,8 +23,8 @@ const AddProduct = () => {
       });
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="container">
+      <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <input
           placeholder="Product Name"
           {...register("name", { required: true })}
@@ -56,7 +56,13 @@ const AddProduct = () => {
           disabled
         />
 
-        <input type="submit" value="Add Product" />
+        <div className="inventory-button">
+          <input
+            className="manage-inventory-button"
+            type="submit"
+            value="Add Product"
+          />
+        </div>
       </form>
     </div>
   );

@@ -2,8 +2,37 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    
+    margin-top: 80px;
 }
+
+.inventory-button{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manage-inventory-button{
+    background-color: transparent;
+    color: #000957;
+    font-family: 'Saira Condensed', sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 22px;
+    border: 2px solid #e85b40;
+    transition: 0.4s;
+}
+
+.manage-inventory-button span{
+    margin-left: 5px;
+}
+
+.manage-inventory-button:hover{
+    color: white;
+    background-color: #e85b40;
+}
+
+
 
 @media only screen and (max-width: 576px) {
     .home-product-container{
