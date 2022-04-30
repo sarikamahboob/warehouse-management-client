@@ -13,7 +13,7 @@ const Inventory = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/inventory")
+    fetch("https://young-sands-25247.herokuapp.com/inventory")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -21,7 +21,7 @@ const Inventory = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure to delete the product?");
     if (proceed) {
-      fetch(`http://localhost:5000/inventory/${id}`, {
+      fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

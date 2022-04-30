@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
+import useToken from "../../Hooks/useToken";
 import Loading from "../../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import "./SignUp.css";
@@ -14,6 +15,7 @@ const SignUp = () => {
   let errorElement;
   let passwordError;
   const [errors, setErrors] = useState("");
+  const [token] = useToken(user);
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -29,7 +31,7 @@ const SignUp = () => {
     }
   };
 
-  if (user) {
+  if (token) {
     navigate(`/home`);
   }
   if (loading) {

@@ -6,6 +6,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import auth from "../../../firebase.init";
+import useToken from "../../Hooks/useToken";
 import Loading from "../../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
@@ -17,18 +18,19 @@ const SignIn = () => {
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending, passwordError] =
     useSendPasswordResetEmail(auth);
+  const [token] = useToken(user);
 
   let from = location.state?.from?.pathname || "/";
   let errorElement;
 
-  const handleSignIn = (event) => {
+  const handleSignIn = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
   };
 
-  if (user) {
+  if (token) {
     navigate(from, { replace: true });
   }
 

@@ -11,7 +11,7 @@ const UpdateProduct = () => {
   const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/inventory/${id}`)
+    fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [isReload]);
@@ -23,7 +23,7 @@ const UpdateProduct = () => {
 
     const updateQuantity = { quantity };
 
-    fetch(`http://localhost:5000/inventory/${id}`, {
+    fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
 
     const updateQuantity = { quantity };
 
-    fetch(`http://localhost:5000/inventory/${id}`, {
+    fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

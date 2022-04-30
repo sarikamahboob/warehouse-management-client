@@ -10,6 +10,7 @@ import Loading from "../../Loading/Loading";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
+import useToken from "../../Hooks/useToken";
 
 const SocialLogin = () => {
   const navigate = useNavigate();
@@ -22,8 +23,9 @@ const SocialLogin = () => {
     useSignInWithFacebook(auth);
   let errorElement;
   let from = location.state?.from?.pathname || "/";
+  const [token] = useToken(googleUser || githubUser || facebookUser);
 
-  if (googleUser || githubUser || facebookUser) {
+  if (token) {
     navigate(from, { replace: true });
   }
 
