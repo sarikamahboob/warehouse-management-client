@@ -1,0 +1,122 @@
+.footer{
+    background-color: #000957;
+    margin-top: 80px;
+}
+
+.first-footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    color: white;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+.quick-link >h1 , .industries >h1, .services > h1, .contact-us > h1{
+    color: #e85b40;
+    font-family: 'Saira Condensed', sans-serif;
+    margin-bottom: 20px;
+}
+
+.quick-link > li{
+    cursor: pointer;
+}
+
+.quick-link > li, .industries>li , .services > li{
+    list-style: none;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.4s;
+    margin-top: 5px;
+}
+
+.quick-link > li:hover, .industries>li:hover , .services > li:hover{
+    color: #e85b40;
+}
+
+.quick-link > li > span, .industries>li > span , .services > li > span{
+    margin-right: 5px;
+    color: #e85b40;
+}
+
+.contact{
+    margin-top: 10px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon{
+    color: #e85b40;
+    margin-right: 8px;
+}
+
+.second-footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    color: white;
+    border-top: 1px solid #e85b40;
+}
+
+.social-login-icons{
+    display: flex;
+}
+
+.s-icon{
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    border: 1px solid white;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    transition: .3s linear;
+    margin-right: 15px;
+}
+
+.s-icon:hover{
+    background-color: #e85b40;
+    border: 1px solid #e85b40;
+}
+
+.copyright p > span{
+    color: #e85b40;
+}
+@media only screen and (max-width: 576px) {
+    .first-footer-container{
+      display: flex;
+      flex-direction: column;
+    padding: 20px;
+    margin-left: 40px;
+    }
+    .quick-link >h1 , .industries >h1, .services > h1, .contact-us > h1{
+        margin-top: 20px;
+    }
+    .second-footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .copyright {
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px ) {
+    .first-footer-container{
+        grid-template-columns: repeat(2,1fr);
+        padding: 20px;
+    }
+    .quick-link >h1 , .industries >h1, .services > h1, .contact-us > h1{
+        margin-top: 20px;
+    }
+    .second-footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .copyright {
+        margin-top: 15px;
+    }
+}
+
+
+

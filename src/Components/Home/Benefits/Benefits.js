@@ -7,7 +7,12 @@ import benefit4 from "../../../Images/benefit4.png";
 
 const Benefits = () => {
   return (
-    <div className="container">
+    <div
+      className="container"
+      data-aos="fade-right"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+    >
       <h1 className="benefit-section-title">Customer Benefits</h1>
       <div className="benefit-container">
         <div className="single-benefit">

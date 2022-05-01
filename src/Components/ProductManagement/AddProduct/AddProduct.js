@@ -2,6 +2,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../../firebase.init";
+import "./AddProduct.css";
 
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
@@ -57,11 +58,7 @@ const AddProduct = () => {
         />
 
         <div className="inventory-button">
-          <input
-            className="manage-inventory-button"
-            type="submit"
-            value="Add Product"
-          />
+          <input className="add-product" type="submit" value="Add Product" />
         </div>
       </form>
     </div>

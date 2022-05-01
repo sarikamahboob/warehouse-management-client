@@ -8,7 +8,12 @@ import warehouse4 from "../../../Images/warehouse4.jpg";
 
 const WarehouseInfo = () => {
   return (
-    <div className="warehouse-info-container">
+    <div
+      className="warehouse-info-container"
+      data-aos="fade-right"
+      data-aos-easing="linear"
+      data-aos-duration="1000"
+    >
       <Tabs
         defaultActiveKey="profile"
         id="uncontrolled-tab-example"
