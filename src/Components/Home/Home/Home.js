@@ -6,6 +6,7 @@ import Banner from "../Banner/Banner";
 import "./Home.css";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import WarehouseInfo from "../WarehouseInfo/WarehouseInfo";
+import Benefits from "../Benefits/Benefits";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -39,6 +40,8 @@ const Home = () => {
             </span>
           </button>
         </div>
+
+        <Benefits />
         <WarehouseInfo />
       </div>
     </div>
