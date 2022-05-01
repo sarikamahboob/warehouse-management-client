@@ -40,18 +40,18 @@ const Header = () => {
                 >
                   Blogs
                 </Nav.Link>
-                <Nav.Link
-                  as={NavLink}
-                  to="/inventory"
-                  className={({ isActive }) =>
-                    isActive ? "active" : "nav-link"
-                  }
-                >
-                  Inventory
-                </Nav.Link>
 
                 {user && (
                   <>
+                    <Nav.Link
+                      as={NavLink}
+                      to="/inventory"
+                      className={({ isActive }) =>
+                        isActive ? "active" : "nav-link"
+                      }
+                    >
+                      Inventory
+                    </Nav.Link>
                     <Nav.Link
                       as={NavLink}
                       to="/addProduct"

@@ -17,14 +17,24 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="first-footer-container">
-          <div className="quick-link">
+          <div
+            className="quick-link"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <h1>Quick Link</h1>
             <li onClick={() => navigate(`/home`)}> Home</li>
             <li onClick={() => navigate(`/blogs`)}>Blogs</li>
             <li onClick={() => navigate(`/inventory`)}>Inventory</li>
             <li onClick={() => navigate(`/userproducts`)}>User Products</li>
           </div>
-          <div className="industries">
+          <div
+            className="industries"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <h1>Industries</h1>
             <li>
               {" "}
@@ -66,7 +76,12 @@ const Footer = () => {
               Oil & Gas
             </li>
           </div>
-          <div className="services">
+          <div
+            className="services"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <h1> Services</h1>
             <li>
               <span>
@@ -113,7 +128,12 @@ const Footer = () => {
               Real Time Tracking
             </li>
           </div>
-          <div className="contact-us">
+          <div
+            className="contact-us"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
             <h1>Contact Us</h1>
             <div className="contact">
               <span className="icon">
