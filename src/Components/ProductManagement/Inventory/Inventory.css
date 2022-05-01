@@ -1,9 +1,60 @@
-.product-container{
+.product-container-table{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-rows: repeat(1, 1fr);
     margin-top: 80px;
     
+}
+
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.products:hover{
+    border: 1px solid #e85b40;
+}
+
+.products:hover .single-product-name{
+    color: #e85b40;
+}
+
+.product-title {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #000957;
+    margin-bottom: 20px;
+    
+}
+
+.product-title span{
+    color: #000957;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.delete-product{
+  border: 2px solid #e85b40;
+    color: #e85b40;
+    padding: 5px 15px;
+    font-size: 25px;
+    border-radius: 10%;
+    margin-right: 25px;
+    transition: 0.4s;
+}
+
+.delete-product:hover{
+    color: white;
+    background-color: #e85b40;
 }
 
 @media only screen and (max-width: 576px) {
@@ -11,11 +62,38 @@
         grid-template-columns: repeat(1, 1fr);
         
     }
+    .products{
+        display: flex;
+        flex-direction: column;
+    }
+    .delete-product{
+          margin-right: 0px;
+      }
+      .product-title {
+          display: none;
+      }
+
+      .delete-product{
+          margin-top: 12px;
+      }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 768px ) {
     .product-container{
         grid-template-columns: repeat(2, 1fr);
-        
     }
+    .products{
+        display: flex;
+        flex-direction: column;
+    }
+    .delete-product{
+          margin-right: 0px;
+      }
+      .product-title {
+          display: none;
+      }
+
+      .delete-product{
+          margin-top: 12px;
+      }
 }

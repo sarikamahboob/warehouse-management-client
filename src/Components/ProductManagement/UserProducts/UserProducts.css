@@ -1,18 +1,18 @@
-.order-container{
+.user-product-container{
     display: flex;
     flex-direction: column;
-
+    margin-top: 80px;
 }
 
-.order-image{
+.user-product-image{
     width: 100px;
     border-radius: 10px;
     margin-right: 10px;
     border-radius: 50%;
 }
 
-.order{
-    width: 30%;
+.user-product{
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,12 +23,88 @@
     border: 2px solid #041562;
 }
 
-.order li{
+.user-product li{
     list-style: none;
     margin-bottom: 10px;
 }
 
-.order-name, .order-price{
+.user-product-name, .user-product-price{
     margin-right: 10px;
     font-size: 18px;
+    color: #000957;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.user-product-delete{
+    border: 1px solid #e85b40;
+    color: #e85b40;
+    padding: 5px 15px;
+    font-size: 25px;
+    border-radius: 10%;
+    margin-right: 25px;
+    transition: 0.4s;
+    background-color: transparent;
+    margin-left: 10px;
+}
+
+.user-product-delete:hover{
+    background-color: #e85b40;
+    color: white;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .single-product-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .user-product{
+        width: 80%;
+    }
+    .user-product > li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .user-product-name{
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    .user-product-price{
+        margin-top: 10px;
+    }
+    .user-product-delete{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px ) {
+    .single-product-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .user-product{
+        width: 100%;
+    }
+    .user-product > li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .user-product-name{
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    .user-product-price{
+        margin-top: 10px;
+    }
+    .user-product-delete{
+        margin-top: 10px;
+    }
 }

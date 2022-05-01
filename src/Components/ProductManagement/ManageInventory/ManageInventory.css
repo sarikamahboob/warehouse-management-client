@@ -1,0 +1,116 @@
+.product-table{
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+
+}
+
+.single-product{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.single-product > .single-product-name,.single-product-description{
+    width: 50%;
+    margin-left: 20px;
+}
+
+.single-product >  .single-product-price , .single-product-supplier, .single-product-quantity{
+    width: 20%;
+    margin-left: 20px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.stock-update-button{
+    margin-right: 15px;
+}
+
+.single-product-name{
+    color: #000957;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 0.4s ;
+}
+
+.single-product-description{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+.single-product-description span{
+    color:#e85b40;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.single-product-description span:hover{
+    color: #000957;
+}
+
+@media only screen and (max-width: 576px) {
+    .single-product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .single-product > .single-product-name, .single-product-description{
+        width: 100%;
+        margin-left: 0px;
+        padding: 10px;
+    }
+
+    .single-product-name, .single-product-description,.single-product-supplier,.single-product-quantity{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    
+    .single-product > .single-product-price{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .stock-update-button {
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px ) {
+    .single-product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .single-product > .single-product-name, .single-product-description{
+        width: 100%;
+        margin-left: 0px;
+        padding: 10px;
+    }
+
+    .single-product-name, .single-product-description,.single-product-supplier,.single-product-quantity{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    
+    .single-product > .single-product-price{
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .stock-update-button {
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+}
+
+
+
+

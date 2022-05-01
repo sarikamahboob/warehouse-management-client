@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import "./UserProducts.css";
+import { FaTrashAlt } from "react-icons/fa";
 
 const UserProducts = () => {
   const [user] = useAuthState(auth);
@@ -53,19 +54,23 @@ const UserProducts = () => {
   };
 
   return (
-    <div>
-      <h1>Orders</h1>
-      <div className="order-container">
+    <div className="container">
+      <div className="user-product-container">
         {userProducts.map((order) => (
-          <div className="order">
+          <div className="user-product">
             <li>
               <span>
-                <img className="order-image" src={order.image} alt="" />
+                <img className="user-product-image" src={order.image} alt="" />
               </span>
-              <span className="order-name"> {order.name}</span>
-              <span className="order-price">${order.price}</span>
+              <span className="user-product-name"> {order.name}</span>
+              <span className="user-product-price">${order.price}</span>
               <span>
-                <button onClick={() => handleDelete(order._id)}>X</button>
+                <button
+                  className="user-product-delete"
+                  onClick={() => handleDelete(order._id)}
+                >
+                  <FaTrashAlt />
+                </button>
               </span>
             </li>
           </div>

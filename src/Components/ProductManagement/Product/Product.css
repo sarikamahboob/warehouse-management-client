@@ -1,17 +1,17 @@
 .product-card{
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
     padding: 20px;
     height: 100%;
     transition: 0.4s linear;
 }
 
 .product-card:hover{
-    border: 2px solid #e85b40;
+    border: 1px solid #e85b40;
     
 }
 
 .product-card:hover .product-image{
-    border-bottom: 2px solid #e85b40;
+    border-bottom: 1px solid #e85b40;
     transform: scaleX(0.8);
 }
 
@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 1px solid lightgray;
     transition: 0.4s;
 }
 
@@ -80,3 +80,4 @@
     color: white;
     background-color: #e85b40;
 }
+

@@ -3,6 +3,9 @@ import {} from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import "./UpdateProduct.css";
+import { MdDeliveryDining } from "react-icons/md";
+import { BiArrowBack } from "react-icons/bi";
 
 const UpdateProduct = () => {
   const navigate = useNavigate();
@@ -62,28 +65,64 @@ const UpdateProduct = () => {
   };
 
   return (
-    <div>
-      <div className="single-product-card">
-        <div className="single-product-image">
-          <img src={product.image} alt="" className="w-75" />
+    <div className="container">
+      <div className="update-product-container">
+        <div className="single-product-card">
+          <div className="single-product-image">
+            <img src={product.image} alt="" className="w-75" />
+          </div>
+          <div className="update-product-info">
+            <p className="update-product-name">{product.name}</p>
+            <p className="update-product-description">{product.description}</p>
+            <p className="update-product-price">
+              <span>Price:</span> ${product.price}
+            </p>
+            <p className="update-product-supplier">
+              <span>Supplier Name:</span> {product.supplier_name}
+            </p>
+            <p className="update-product-quantity">
+              <span>Quantity:</span> {product.quantity}
+            </p>
+            <form
+              className="update-product-stock"
+              onSubmit={handleIncreaseQuantity}
+            >
+              <input
+                className="stock-number"
+                type="number"
+                name="quantity"
+                id=""
+                placeholder="Number"
+              />
+              <span>
+                {" "}
+                <BiArrowBack />{" "}
+              </span>
+              <input
+                className="restock-item-button"
+                type="submit"
+                value="Restock "
+              />
+            </form>
+            <button
+              className="delivered-button"
+              onClick={handleDecreaseProduct}
+            >
+              Delivered{" "}
+              <span>
+                <MdDeliveryDining />
+              </span>
+            </button>
+          </div>
         </div>
-        <p>{product.name}</p>
-        <p>{product.description}</p>
-        <p>Price: ${product.price}</p>
-        <p>Supplier Name: {product.supplier_name}</p>
-        <p>Quantity: {product.quantity}</p>
-        <button onClick={handleDecreaseProduct}>Delivered</button>
-        <form onSubmit={handleIncreaseQuantity}>
-          <input type="number" name="quantity" id="" />
-          <input type="submit" value="Restock item" />
-        </form>
+        <button
+          className="manage-inventory-button"
+          onClick={() => navigate(`/inventory`)}
+        >
+          Manage Inventories
+        </button>
       </div>
-      <button
-        className="manage-inventory-button"
-        onClick={() => navigate(`/inventory`)}
-      >
-        Manage Inventories
-      </button>
+
       <ToastContainer />
     </div>
   );

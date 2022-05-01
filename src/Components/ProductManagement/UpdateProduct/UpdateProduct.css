@@ -1,0 +1,142 @@
+.update-product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.single-product-card{
+    display: flex;
+}
+
+.single-product-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.single-product-image img{
+    width: 100%;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+.update-product-info{
+    margin-left: 20px;
+}
+
+.update-product-name{
+    color: #000957;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: 0.4s ;
+}
+.update-product-description{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font: 22px;
+}
+
+.update-product-price, .update-product-supplier, .update-product-quantity{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.update-product-price > span, .update-product-supplier >span, .update-product-quantity> span{
+    color: #000957;
+    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+
+.update-product-stock .stock-number{
+    border: 1px solid lightgray;;
+    outline: none;
+    box-sizing: border-box;
+    padding: 13px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.update-product-stock .stock-number::placeholder {
+    color: lightgray;
+    font-family: 'Roboto', sans-serif;
+}
+
+.update-product-stock .stock-number:hover{
+    border: 1px solid #041562;
+}
+.update-product-stock span{
+    color: #e85b40;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.manage-inventory-button{
+    margin-top: 100px;
+}
+
+.restock-item-button{
+    padding: 10px 16px;
+    margin-left: 15px;
+    color: #000957;
+    border: 1px solid #e85b40;
+    background-color: transparent;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+.restock-item-button:hover{
+    background-color: #e85b40;
+    color: white;
+}
+
+.delivered-button{
+    margin-top: 30px;
+    padding: 10px 16px;
+    color: white;
+    border: 1px solid #e85b40;
+    background-color: #e85b40;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 10px;
+}
+
+.delivered-button span {
+    margin-left: 5px;
+    color: white !important;
+    font-size: 23px;
+}
+
+.delivered-button:hover{
+    background-color: transparent;
+    color: #e85b40;
+}
+
+.delivered-button:hover span {
+    color: #e85b40 !important;
+}
+
+@media only screen and (max-width: 576px) {
+    .single-product-card{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px ) {
+    .single-product-card{
+        display: flex;
+        flex-direction: column;
+    }
+}
