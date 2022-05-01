@@ -5,6 +5,7 @@ import Product from "../../ProductManagement/Product/Product";
 import Banner from "../Banner/Banner";
 import "./Home.css";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import WarehouseInfo from "../WarehouseInfo/WarehouseInfo";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -38,6 +39,7 @@ const Home = () => {
             </span>
           </button>
         </div>
+        <WarehouseInfo />
       </div>
     </div>
   );
