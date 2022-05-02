@@ -1,6 +1,9 @@
 .banner{
     font-family: 'Roboto', sans-serif;
-    top:0;
+}
+
+.carousel-caption{
+    top: 40%;
 }
 
 .banner-button{
@@ -20,8 +23,15 @@
 }
 
 @media only screen and (max-width: 576px) {
+    .carousel-caption{
+        top: 20%;
+    }
     .carousel-caption > p {
         display: none;
+    }
+    .carousel-item > img{
+        width: auto;
+        height: 300px;
     }
     .banner-button{
         background-color: transparent;
@@ -35,8 +45,12 @@
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px){
-    .carousel-caption > p {
-        display: none;
+@media only screen and (min-width: 576px) and (max-width: 992px){
+    .carousel-caption{
+        top: 15%;
+    }
+    .carousel-item > img{
+        width: auto;
+        height: 400px;
     }
 }

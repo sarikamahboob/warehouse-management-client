@@ -43,7 +43,7 @@
 
     }
 }
-@media only screen and (min-width: 576px) and (max-width: 768px ) {
+@media only screen and (min-width: 576px) and (max-width: 992px ) {
     .blog-container{
         grid-template-columns: repeat(1,1fr);
     }

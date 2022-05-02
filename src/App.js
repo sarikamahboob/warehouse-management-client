@@ -18,6 +18,7 @@ import UserProducts from "./Components/ProductManagement/UserProducts/UserProduc
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import AboutUs from "./Components/Home/AboutUs/AboutUs";
 
 function App() {
   useEffect(() => {
@@ -63,6 +64,7 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />

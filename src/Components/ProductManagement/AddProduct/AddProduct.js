@@ -57,9 +57,7 @@ const AddProduct = () => {
           disabled
         />
 
-        <div className="inventory-button">
-          <input className="add-product" type="submit" value="Add Product" />
-        </div>
+        <input className="add-product" type="submit" value="Add Product" />
       </form>
     </div>
   );

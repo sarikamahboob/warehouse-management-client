@@ -1,20 +1,19 @@
-.add-product{
+.form .add-product{
+    width: 150px;
+    background-color: transparent;
     color: #000957;
     font-family: 'Saira Condensed', sans-serif;
-    padding:  20px;
+    padding: 10px 20px;
     border-radius: 10px;
-    font-size: 22px;
-    border: 2px solid #e85b40 !important;
+    font-size: 20px;
+    border: 2px solid #e85b40;
     transition: 0.4s;
-    padding-left: 0px !important;
-    background-color: transparent !important;
-}
-
-.form .add-product{
-    padding-left: 0px;
+    font-weight: 700;
+    margin-top: 50px;
 }
 
 .add-product:hover{
     color: white;
     background-color: #e85b40 !important;
+    border: 2px solid #e85b40 !important;
 }

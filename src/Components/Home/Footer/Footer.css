@@ -1,7 +1,10 @@
 .footer{
-    background-color: #000957;
     margin-top: 340px;
     bottom: 0%;
+    background-image:url("../../../Images/footer4.png");
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
 }
 
 .first-footer-container{
@@ -12,9 +15,10 @@
     margin-bottom: 20px;
 }
 .quick-link >h1 , .industries >h1, .services > h1, .contact-us > h1{
-    color: #e85b40;
+    color: white;
     font-family: 'Saira Condensed', sans-serif;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .quick-link > li{
@@ -23,10 +27,11 @@
 
 .quick-link > li, .industries>li , .services > li{
     list-style: none;
-    font-size: 17px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     transition: 0.4s;
     margin-top: 5px;
+    font-weight: 700;
 }
 
 .quick-link > li:hover, .industries>li:hover , .services > li:hover{
@@ -40,8 +45,9 @@
 
 .contact{
     margin-top: 10px;
-    font-size: 17px;
+    font-size:19px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
 
 .icon{
@@ -55,6 +61,7 @@
     padding: 30px;
     color: white;
     border-top: 1px solid #e85b40;
+    font-weight: 700;
 }
 
 .social-login-icons{
@@ -101,7 +108,7 @@
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px ) {
+@media only screen and (min-width: 576px) and (max-width: 992px ) {
     .first-footer-container{
         grid-template-columns: repeat(2,1fr);
         padding: 20px;

@@ -5,12 +5,23 @@
     color: white;
 }
 
+.navbar-light .navbar-toggler-icon{
+    background-color: #e85b40;
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    border: 2px solid #e85b40 !important;
+}
+
 .navbar-brand {
     color: white !important;
     font-size: 30px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
+
+
 
 .navbar-brand 
  span{
@@ -27,4 +38,17 @@
 
 .navbar-nav .nav-link.active{
     color: #e85b40 !important;
+}
+
+@media only screen and (max-width: 576px) {
+    .signin-nav{
+        margin-right: 10px;
+
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 992px ) {
+    .signin-nav{
+        margin-right: 10px;
+
+    }
 }

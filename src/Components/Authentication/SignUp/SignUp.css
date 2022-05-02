@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 .form-container{
-    width: 450px;
-    margin: 60px auto;
-    height: 100%;
+    width: 100%;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
     box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+
+}
+.signup-image{
+    width: 700%;
+}
+
+.signup-image img{
+    width: 100%;
 }
 
 .form-title{
@@ -37,7 +47,7 @@
 }
 
 .form input::placeholder {
-    color: #041562;
+    color: #e85b40;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -125,4 +135,24 @@
     color: red;
     margin:10px;
     
+}
+
+@media only screen and (max-width: 576px) {
+    .form-container{
+        flex-direction: column-reverse;
+    }
+    .signup-image{
+        width: 100%;
+    }
+    
+    
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px ) {
+    .form-container{
+        flex-direction: column-reverse;
+    }
+    .signup-image{
+        width: 100%;
+    }
 }

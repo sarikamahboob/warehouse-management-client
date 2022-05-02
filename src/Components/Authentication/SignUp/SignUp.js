@@ -7,6 +7,7 @@ import Loading from "../../Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import "./SignUp.css";
 import signup from "./signup.jpg";
+import signup2 from "../../../Images/signup2.png";
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -45,59 +46,71 @@ const SignUp = () => {
     );
   }
   return (
-    <div className="form-container">
-      <img src={signup} alt="" className="w-100" />
-      <h1 className="form-title">Sign Up</h1>
-      <form className="form" onSubmit={handleSignUp}>
-        <input type="text" name="name" id="" placeholder="Enter Your Name" />
-        <input
-          type="email"
-          name="email"
-          id=""
-          placeholder="Enter Your Email"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          id=""
-          placeholder="Password"
-          required
-        />
-        <input
-          type="password"
-          name="confirmPassword"
-          id=""
-          placeholder="Confirm Password"
-          required
-        />
-        <p className="error-message">{errors}</p>
-        <button>Sign Up</button>
-      </form>
+    <div className="container">
+      <div className="form-container">
+        <div className="signup-image">
+          <img src={signup2} alt="" />
+        </div>
+        <div>
+          <img src={signup} alt="" className="w-100" />
+          <h1 className="form-title">Sign Up</h1>
+          <form className="form" onSubmit={handleSignUp}>
+            <input
+              type="text"
+              name="name"
+              id=""
+              placeholder="Enter Your Name"
+            />
+            <input
+              type="email"
+              name="email"
+              id=""
+              placeholder="Enter Your Email"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              id=""
+              placeholder="Password"
+              required
+            />
+            <input
+              type="password"
+              name="confirmPassword"
+              id=""
+              placeholder="Confirm Password"
+              required
+            />
+            <p className="error-message">{errors}</p>
+            <button>Sign Up</button>
+          </form>
 
-      {errorElement}
+          {errorElement}
 
-      <p className="toggle-link">
-        Already have an account ?
-        <span>
-          <Link
-            to="/signin"
-            onClick={() => navigate(`/signin`)}
-            className="ms-2 text-decoration-none"
-            style={{ color: "#e85b40", fontWeight: "500" }}
-          >
-            Sign In
-          </Link>
-        </span>
-      </p>
+          <p className="toggle-link">
+            Already have an account ?
+            <span>
+              <Link
+                to="/signin"
+                onClick={() => navigate(`/signin`)}
+                className="ms-2 text-decoration-none"
+                style={{ color: "#e85b40", fontWeight: "500" }}
+              >
+                Sign In
+              </Link>
+            </span>
+          </p>
 
-      <div className="or">
-        <div className="line"></div>
-        <span>or</span>
-        <div className="line"></div>
+          <div className="or">
+            <div className="line"></div>
+            <span>or</span>
+            <div className="line"></div>
+          </div>
+
+          <SocialLogin />
+        </div>
       </div>
-
-      <SocialLogin />
     </div>
   );
 };

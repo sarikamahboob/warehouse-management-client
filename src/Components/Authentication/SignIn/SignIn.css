@@ -1,0 +1,49 @@
+.signin-form-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    margin-top: 80px;
+}
+
+.signin-form{
+    width: 300%;
+}
+.signin-image{
+    width: 400%;
+}
+
+.signin-image img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+    .signin-form-container{
+        flex-direction: column-reverse;
+    }
+    .signin-form{
+        width: 100%;
+    }
+    .signin-image{
+        width: 100%;
+    }
+    
+    
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px ) {
+    .signin-form-container{
+        flex-direction: column-reverse;
+    }
+    .signin-form{
+        width: 100%;
+    }
+    .signin-image{
+        width: 100%;
+    }
+}
+

@@ -72,11 +72,20 @@ const Header = () => {
                     </Nav.Link>
                   </>
                 )}
+                <Nav.Link
+                  as={NavLink}
+                  to="/aboutus"
+                  className={({ isActive }) =>
+                    isActive ? "active" : "nav-link"
+                  }
+                >
+                  About Us
+                </Nav.Link>
                 {user ? (
                   <Nav.Link onClick={handleSignOut}>Sing Out</Nav.Link>
                 ) : (
                   <div className="d-flex">
-                    <Nav.Link as={NavLink} to="/signin">
+                    <Nav.Link className="signin-nav" as={NavLink} to="/signin">
                       Sing In
                     </Nav.Link>
                     <Nav.Link as={NavLink} to="/signup">
