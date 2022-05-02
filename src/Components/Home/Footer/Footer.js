@@ -29,6 +29,7 @@ const Footer = () => {
             <li onClick={() => navigate(`/inventory`)}>Inventory</li>
             <li onClick={() => navigate(`/aboutus`)}>About Us</li>
             <li onClick={() => navigate(`/userproducts`)}>User Products</li>
+            <li onClick={() => navigate(`/services`)}>Services</li>
             <li onClick={() => navigate(`/addProduct`)}>Add Products</li>
           </div>
           <div
@@ -85,45 +86,44 @@ const Footer = () => {
             data-aos-duration="1000"
           >
             <h1> Services</h1>
-            <li>
+            <li onClick={() => navigate(`/services`)}>
               <span>
                 <BsArrowRightShort />
               </span>
               Warehouse Storage
             </li>
-            <li>
-              {" "}
+            <li onClick={() => navigate(`/services`)}>
               <span>
                 <BsArrowRightShort />
               </span>
               24/7 Hours Support
             </li>
-            <li>
+            <li onClick={() => navigate(`/services`)}>
               {" "}
               <span>
                 <BsArrowRightShort />
               </span>
               Transparent Pricing
             </li>
-            <li>
+            <li onClick={() => navigate(`/services`)}>
               <span>
                 <BsArrowRightShort />
               </span>
               Security For Cargo
             </li>
-            <li>
+            <li onClick={() => navigate(`/services`)}>
               <span>
                 <BsArrowRightShort />
               </span>
               Easy Payment Methods
             </li>
-            <li>
+            <li onClick={() => navigate(`/services`)}>
               <span>
                 <BsArrowRightShort />
               </span>
               Fast & Efficient Delivery
             </li>
-            <li>
+            <li onClick={() => navigate(`/services`)}>
               <span>
                 <BsArrowRightShort />
               </span>

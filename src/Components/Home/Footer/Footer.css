@@ -21,9 +21,6 @@
     font-weight: 700;
 }
 
-.quick-link > li{
-    cursor: pointer;
-}
 
 .quick-link > li, .industries>li , .services > li{
     list-style: none;
@@ -32,6 +29,7 @@
     transition: 0.4s;
     margin-top: 5px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .quick-link > li:hover, .industries>li:hover , .services > li:hover{
