@@ -6,7 +6,7 @@ const useToken = (user) => {
     const getToken = async () => {
       const email = user?.user?.email;
       if (email) {
-        fetch("https://warehouse-management-server2.vercel.app/login", {
+        fetch("https://warehouse-management-server-0tt3.onrender.com/login", {
           method: "POST",
           headers: {
             "content-type": "application/json",

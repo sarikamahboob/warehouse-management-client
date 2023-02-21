@@ -16,7 +16,7 @@ const UserProducts = () => {
     console.log(user.email);
     try {
       fetch(
-        `https://warehouse-management-server2.vercel.app/addProduct?email=${email}`,
+        `https://warehouse-management-server-0tt3.onrender.com/addProduct?email=${email}`,
         {
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -39,7 +39,7 @@ const UserProducts = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete the item?");
     if (proceed) {
-      fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
+      fetch(`https://warehouse-management-server-0tt3.onrender.com/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

@@ -10,7 +10,7 @@ const AddProduct = () => {
 
   const onSubmit = (data, event) => {
     console.log(data);
-    fetch("https://warehouse-management-server2.vercel.app/addProduct", {
+    fetch("https://warehouse-management-server-0tt3.onrender.com/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",

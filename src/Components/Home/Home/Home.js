@@ -12,7 +12,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://warehouse-management-server2.vercel.app/inventory")
+    fetch("https://warehouse-management-server-0tt3.onrender.com/inventory")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

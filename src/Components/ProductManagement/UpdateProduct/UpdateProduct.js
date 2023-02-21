@@ -13,7 +13,7 @@ const UpdateProduct = () => {
   const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
-    fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`)
+    fetch(`https://warehouse-management-server-0tt3.onrender.com/inventory/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [isReload]);
@@ -25,7 +25,7 @@ const UpdateProduct = () => {
 
     const updateQuantity = { quantity };
 
-    fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
+    fetch(`https://warehouse-management-server-0tt3.onrender.com/inventory/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ const UpdateProduct = () => {
 
     const updateQuantity = { quantity };
 
-    fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
+    fetch(`https://warehouse-management-server-0tt3.onrender.com/inventory/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

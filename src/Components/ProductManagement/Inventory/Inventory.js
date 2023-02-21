@@ -14,7 +14,7 @@ const Inventory = () => {
   const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
-    fetch("https://warehouse-management-server2.vercel.app/inventory")
+    fetch("https://warehouse-management-server-0tt3.onrender.com/inventory")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [isReload]);
@@ -22,7 +22,7 @@ const Inventory = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure to delete the product?");
     if (proceed) {
-      fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
+      fetch(`https://warehouse-management-server-0tt3.onrender.com/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
