@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { useEffect, useState } from "react";
 
 const useToken = (user) => {
@@ -7,7 +6,7 @@ const useToken = (user) => {
     const getToken = async () => {
       const email = user?.user?.email;
       if (email) {
-        fetch("https://young-sands-25247.herokuapp.com/login", {
+        fetch("https://warehouse-management-server2.vercel.app/login", {
           method: "POST",
           headers: {
             "content-type": "application/json",

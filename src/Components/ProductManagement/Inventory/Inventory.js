@@ -1,14 +1,11 @@
-import userEvent from "@testing-library/user-event";
 import React, { useEffect, useState } from "react";
-import { Table } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { FaTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import auth from "../../../firebase.init";
 import ManageInventory from "../ManageInventory/ManageInventory";
-import Product from "../Product/Product";
 import "./Inventory.css";
-import { FaTrashAlt } from "react-icons/fa";
 
 const Inventory = () => {
   const navigate = useNavigate();
@@ -17,7 +14,7 @@ const Inventory = () => {
   const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
-    fetch("https://young-sands-25247.herokuapp.com/inventory")
+    fetch("https://warehouse-management-server2.vercel.app/inventory")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [isReload]);
@@ -25,7 +22,7 @@ const Inventory = () => {
   const handleDeleteProduct = (id) => {
     const proceed = window.confirm("Are you sure to delete the product?");
     if (proceed) {
-      fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`, {
+      fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

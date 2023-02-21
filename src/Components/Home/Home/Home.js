@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
-import Inventory from "../../ProductManagement/Inventory/Inventory";
 import Product from "../../ProductManagement/Product/Product";
 import Banner from "../Banner/Banner";
-import "./Home.css";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import WarehouseInfo from "../WarehouseInfo/WarehouseInfo";
 import Benefits from "../Benefits/Benefits";
+import WarehouseInfo from "../WarehouseInfo/WarehouseInfo";
+import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://young-sands-25247.herokuapp.com/inventory")
+    fetch("https://warehouse-management-server2.vercel.app/inventory")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

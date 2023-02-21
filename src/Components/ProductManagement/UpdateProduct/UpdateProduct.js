@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import {} from "react-bootstrap";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { } from "react-bootstrap";
+import { BiArrowBack } from "react-icons/bi";
+import { MdDeliveryDining } from "react-icons/md";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "./UpdateProduct.css";
-import { MdDeliveryDining } from "react-icons/md";
-import { BiArrowBack } from "react-icons/bi";
 
 const UpdateProduct = () => {
   const navigate = useNavigate();
@@ -14,7 +13,7 @@ const UpdateProduct = () => {
   const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
-    fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`)
+    fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [isReload]);
@@ -26,7 +25,7 @@ const UpdateProduct = () => {
 
     const updateQuantity = { quantity };
 
-    fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`, {
+    fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -49,7 +48,7 @@ const UpdateProduct = () => {
 
     const updateQuantity = { quantity };
 
-    fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`, {
+    fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

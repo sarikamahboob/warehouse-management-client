@@ -1,10 +1,10 @@
 import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { FaTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import "./UserProducts.css";
-import { FaTrashAlt } from "react-icons/fa";
 
 const UserProducts = () => {
   const [user] = useAuthState(auth);
@@ -16,7 +16,7 @@ const UserProducts = () => {
     console.log(user.email);
     try {
       fetch(
-        `https://young-sands-25247.herokuapp.com/addProduct?email=${email}`,
+        `https://warehouse-management-server2.vercel.app/addProduct?email=${email}`,
         {
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -39,7 +39,7 @@ const UserProducts = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete the item?");
     if (proceed) {
-      fetch(`https://young-sands-25247.herokuapp.com/inventory/${id}`, {
+      fetch(`https://warehouse-management-server2.vercel.app/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

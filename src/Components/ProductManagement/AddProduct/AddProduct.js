@@ -10,7 +10,7 @@ const AddProduct = () => {
 
   const onSubmit = (data, event) => {
     console.log(data);
-    fetch("https://young-sands-25247.herokuapp.com/addProduct", {
+    fetch("https://warehouse-management-server2.vercel.app/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",
